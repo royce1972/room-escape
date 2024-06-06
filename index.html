@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room-escape</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <style rel="stylesheet" type="text/css">
+        body {
+             min-width: 20vh;
+             min-height: 50vh;
+
+        }       
+        button {
+            font-size:larger;
+        }
+        #btn1{
+            position:absolute;
+            left:0px;
+            top:0px;
+        }
+        #btn2{
+            position:absolute;
+            left:40px;
+            top:0px;
+        }
+        #btn3{
+            position:absolute;
+            left:80px;
+            top:0px;
+        }
+        #btn4{
+            position:absolute;
+            left:0px;
+            top:40px;
+        }
+        #btn5{
+            position:absolute;
+            left:40px;
+            top:40px;
+        }
+        #btn6{
+            position:absolute;
+            left:80px;
+            top:40px;
+        }
+        #btn7{
+            position:absolute;
+            left:0px;
+            top:80px;
+        }
+        #btn8{
+            position:absolute;
+            left:40px;
+            top:80px;
+        }
+        #btn9{
+            position:absolute;
+            left:80px;
+            top:80px;
+        }
+        #btn0{
+            position:absolute;
+            left:40px;
+            top:120px;
+        }
+        #keypad{position:absolute;
+                left:150px;
+                top:100px;}
+        #checkPasswd{position:absolute;
+                     left:135px;
+                     top:260px;}
+            #logpad{position:absolute;
+                    top:35px;
+                    left:65px;
+                    background-color:black;
+                    width:300px;
+                    height:60px;}
+        #vaultLog{color:red;
+                  position:absolute;
+                  left:100px;
+                  top:-15px;
+                  font-size:2em;}
+        #deleteNum{position:absolute;
+                   left:90px;
+                   top:305px;}
+        #vault{position:absolute;
+               left:38%;
+               top:15%;
+               border: 5px solid black;
+               width:400px;
+               height:400px;
+               background-color:gold;}
+        #closeVault{background-color:red;
+                     position:absolute; 
+                     left:375px; 
+                     font-size:1.2em; 
+                     color:white;
+                     width:25px; 
+                     height:30px;}
+        #x-Btn{position: absolute;
+               left:5px;
+               top:-25px;}
+        #vault-2{position:absolute;
+               left:38%;
+               top:15%;
+               border: 5px solid black;
+               width:400px;
+               height:400px;
+               background-color:gold;}
+        #closeVault-2{background-color:red;
+                     position:absolute; 
+                     left:375px; 
+                     font-size:1.2em; 
+                     color:white;
+                     width:25px; 
+                     height:30px;}
+        #x-Btn-2{position: absolute;
+               left:5px;
+               top:-25px;}
+        #button-1{position:absolute;
+                 left:25px;
+                 top:130px;
+                 width:100px;
+                 height:100px;
+                 background-color:white;
+                 border: 5px solid black;
+                 user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;}
+        #button-2{position:absolute;
+                left:150px;
+                top:130px;
+                width:100px;
+                height:100px;
+                background-color:white;
+                border: 5px solid black;
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;}
+        #button-3{position:absolute;
+                 left:275px;
+                 top:130px;
+                 width:100px;
+                 height:100px;
+                 background-color:white;
+                 border: 5px solid black;
+                 user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;}  
+                #vault-3{position:absolute;
+               left:38%;
+               top:15%;
+               border: 5px solid black;
+               width:400px;
+               height:400px;
+               background-color:gold;}
+        #closeVault-3{background-color:red;
+                     position:absolute; 
+                     left:375px; 
+                     font-size:1.2em; 
+                     color:white;
+                     width:25px; 
+                     height:30px;}
+        #x-Btn-3{position: absolute;
+               left:5px;
+               top:-25px;}
+        #firstLine-3{position:absolute;
+                    width:25px;
+                    height:350px;
+                    background-color:black;
+                    left:50px;
+                    top:25px;}
+         #secondLine-3{position:absolute;
+                    width:25px;
+                    height:350px;
+                    background-color:black;
+                    left:125px;
+                    top:25px;}
+        #thirdLine-3{position:absolute;
+                    width:25px;
+                    height:350px;
+                    background-color:black;
+                    left:200px;
+                    top:25px;}
+        #fourthLine-3{position:absolute;
+                    width:25px;
+                    height:350px;
+                    background-color:black;
+                    left:275px;
+                    top:25px;}
+        #firstBtn-3{position:absolute;
+                background-color:white;
+                border:5px solid black;
+                width:75px;
+                height:25px;
+                left:20px;
+                bottom:25px;}
+        #secondBtn-3{position:absolute;
+                background-color:white;
+                border:5px solid black;
+                width:75px;
+                height:25px;
+                left:95px;
+                bottom:25px;}
+        #thirdBtn-3{position:absolute;
+                background-color:white;
+                border:5px solid black;
+                width:75px;
+                height:25px;
+                left:170px;
+                bottom:25px;}
+        #fourthBtn-3{position:absolute;
+                background-color:white;
+                border:5px solid black;
+                width:75px;
+                height:25px;
+                left:245px;
+                bottom:25px;}
+
+    </style>
+    <button id="test" onclick="appearVault();" style="position:absolute; top:500px;">테스트</button> 
+    <button id="test-2" onclick="appearVault2();" style="position:absolute; top:500px; left:100px;">테스트2</button> 
+    <button id="test-3" onclick="appearVault3();" style="position:absolute; top:500px; left:200px;">테스트3</button>  
+    <div id="clue-2" style="min-width: 150vh; height: 98vh; background-color:red;"></div>
+    <div id="clue-3"></div>
+    <div id="clue-4"></div>
+    <div id="clue-5"></div>
+    <faketag id="parent-1"></faketag>
+
+    <script>
+        let makeFakeTag = '<faketag id="child-vaultLog"></faketag>'
+        let inputtedPassWd = [];
+        function checkPassWd (designatedPassWd) {
+            if (JSON.stringify(designatedPassWd) === JSON.stringify(inputtedPassWd)) {
+        alert('비밀번호가 맞습니다');
+        document.getElementById('vaultLog').textContent = 'Open';
+    } else {
+        alert('비밀번호가 틀립니다'); 
+        document.getElementById('vaultLog').textContent = 'Error';
+    }
+}
+    function addText () {
+        const target = document.getElementById('vaultLog');
+        const targetText = document.createTextNode('*');
+            target.appendChild(targetText);
+            }
+            function appearVault3 () {
+                $(document).ready(function() {
+                    $(`<div id="vault-3" class="vault-3">
+        <div class="vault-3" id="closeVault-3" onclick="
+        let elementToRemove = document.querySelector('#vault-3');
+        function removeVault () {
+            elementToRemove.parentNode.removeChild(elementToRemove);  
+        } removeVault();">
+    <h3 id="x-Btn-3">X</h3>
+    </div>
+    <div id="firstLine-3"></div>
+    <div id="secondLine-3"></div>
+    <div id="thirdLine-3"></div>
+    <div id="fourthLine-3"></div>
+
+    <div id="firstBtn-3" onclick="
+    switch(variable13) {
+        case '0':document.getElementById('firstBtn-3').style.bottom = '125px';
+                 variable13 = '1';
+                 break;
+        case '1':document.getElementById('firstBtn-3').style.bottom = '250px'; 
+                 variable13 ='2';
+                 break;
+        case '2':document.getElementById('firstBtn-3').style.bottom = '350px'; 
+                 variable13 ='3'
+                 break;
+        case '3':document.getElementById('firstBtn-3').style.bottom = '25px'; 
+                 variable13 ='0'
+                 break;
+    }    if (variable13+variable23+variable33+variable43=='0123') {
+        setTimeout(function () {alert('확인되었습니다.');}, 250);
+      }"></div>
+    <div id="secondBtn-3" onclick="
+    switch(variable23) {
+        case '0':document.getElementById('secondBtn-3').style.bottom = '125px';
+                 variable23 = '1';
+                 break;
+        case '1':document.getElementById('secondBtn-3').style.bottom = '250px'; 
+                 variable23 ='2';
+                 break;
+        case '2':document.getElementById('secondBtn-3').style.bottom = '350px'; 
+                 variable23 ='3'
+                 break;
+        case '3':document.getElementById('secondBtn-3').style.bottom = '25px'; 
+                 variable23 ='0'
+                 break;
+    }    if (variable13+variable23+variable33+variable43=='0123') {
+        setTimeout(function () {alert('확인되었습니다.');}, 250);
+      }"></div>
+    <div id="thirdBtn-3" onclick="
+    switch(variable33) {
+        case '0':document.getElementById('thirdBtn-3').style.bottom = '125px';
+                 variable33 = '1';
+                 break;
+        case '1':document.getElementById('thirdBtn-3').style.bottom = '250px'; 
+                 variable33 ='2';
+                 break;
+        case '2':document.getElementById('thirdBtn-3').style.bottom = '350px'; 
+                 variable33 ='3'
+                 break;
+        case '3':document.getElementById('thirdBtn-3').style.bottom = '25px'; 
+                 variable33 ='0'
+                 break;
+    }    if (variable13+variable23+variable33+variable43=='0123') {
+        setTimeout(function () {alert('확인되었습니다.');}, 250);
+      }"></div>
+    <div id="fourthBtn-3" onclick="
+    switch(variable43) {
+        case '0':document.getElementById('fourthBtn-3').style.bottom = '125px';
+                 variable43 = '1';
+                 break;
+        case '1':document.getElementById('fourthBtn-3').style.bottom = '250px'; 
+                 variable43 ='2';
+                 break;
+        case '2':document.getElementById('fourthBtn-3').style.bottom = '350px'; 
+                 variable43 ='3'
+                 break;
+        case '3':document.getElementById('fourthBtn-3').style.bottom = '25px'; 
+                 variable43 ='0'
+                 break;
+    }    if (variable13+variable23+variable33+variable43=='0123') {
+        setTimeout(function () {alert('확인되었습니다.');}, 250);
+      }"></div>
+</div>`).appendTo('#parent-1');
+                });
+            }
+            function appearVault2 () {
+                $(document).ready(function() {
+                    $(` <div id="vault-2" class="vault-2">
+        <div class="vault-2" id="closeVault-2" onclick="
+        let elementToRemove = document.querySelector('#vault-2');
+        function removeVault () {
+            elementToRemove.parentNode.removeChild(elementToRemove);  
+        } removeVault();">
+    
+    <h3 id="x-Btn-2">X</h3>
+    </div>
+    <div id="button-1" onclick="
+    switch(variable12) {
+        case '0' : 
+        variable12 = '1';
+        document.getElementById('vault-2-1').textContent = '1'
+        break;
+        case '1' : 
+        variable12 = '2';
+        document.getElementById('vault-2-1').textContent = '2'
+        break;
+        case '2' : 
+        variable12 = '3';
+        document.getElementById('vault-2-1').textContent = '3'
+        break;
+        case '3' : 
+        variable12 = '4';
+        document.getElementById('vault-2-1').textContent = '4'
+        break;
+        case '4' : 
+        variable12 = '5';
+        document.getElementById('vault-2-1').textContent = '5'
+        break;
+        case '5' : 
+        variable12 = '6';
+        document.getElementById('vault-2-1').textContent = '6'
+        break;
+        case '6' : 
+        variable12 = '7';
+        document.getElementById('vault-2-1').textContent = '7'
+        break;
+        case '7' : 
+        variable12 = '8';
+        document.getElementById('vault-2-1').textContent = '8'
+        break;
+        case '8' : 
+        variable12 = '9';
+        document.getElementById('vault-2-1').textContent = '9'
+        break;
+        case '9' : 
+        variable12 = '0';
+        document.getElementById('vault-2-1').textContent = '0'
+        break;
+    } if(variable12+variable22+variable32 == '123') {
+        setTimeout(function () {alert('금고 해제중....');}, 250);
+        }">
+    <h1 id="vault-2-1" style="font-size:3em; position:absolute; left:35px; top:-15px;">0</h1>
+</div>        
+    <div id="button-2" onclick="
+    switch(variable22) {
+        case '0' : 
+        variable22 = '1';
+        document.getElementById('vault-2-2').textContent = '1'
+        break;
+        case '1' : 
+        variable22 = '2';
+        document.getElementById('vault-2-2').textContent = '2'
+        break;
+        case '2' : 
+        variable22 = '3';
+        document.getElementById('vault-2-2').textContent = '3'
+        break;
+        case '3' : 
+        variable22 = '4';
+        document.getElementById('vault-2-2').textContent = '4'
+        break;
+        case '4' : 
+        variable22 = '5';
+        document.getElementById('vault-2-2').textContent = '5'
+        break;
+        case '5' : 
+        variable22 = '6';
+        document.getElementById('vault-2-2').textContent = '6'
+        break;
+        case '6' : 
+        variable22 = '7';
+        document.getElementById('vault-2-2').textContent = '7'
+        break;
+        case '7' : 
+        variable22 = '8';
+        document.getElementById('vault-2-2').textContent = '8'
+        break;
+        case '8' : 
+        variable22 = '9';
+        document.getElementById('vault-2-2').textContent = '9'
+        break;
+        case '9' : 
+        variable22 = '0';
+        document.getElementById('vault-2-2').textContent = '0'
+        break;
+    } if(variable12+variable22+variable32 == '123') {
+        setTimeout(function () {alert('금고 해제중....');}, 250);
+        }">
+    <h1 id="vault-2-2" style="font-size:3em; position:absolute; left:35px; top:-15px;">0</h1>
+    </div>
+    <div id="button-3" onclick="
+    switch(variable32) {
+        case '0' : 
+        variable32 = '1';
+        document.getElementById('vault-2-3').textContent = '1'
+        break;
+        case '1' : 
+        variable32 = '2';
+        document.getElementById('vault-2-3').textContent = '2'
+        break;
+        case '2' : 
+        variable32 = '3';
+        document.getElementById('vault-2-3').textContent = '3'
+        break;
+        case '3' : 
+        variable32 = '4';
+        document.getElementById('vault-2-3').textContent = '4'
+        break;
+        case '4' : 
+        variable32 = '5';
+        document.getElementById('vault-2-3').textContent = '5'
+        break;
+        case '5' : 
+        variable32 = '6';
+        document.getElementById('vault-2-3').textContent = '6'
+        break;
+        case '6' : 
+        variable32 = '7';
+        document.getElementById('vault-2-3').textContent = '7'
+        break;
+        case '7' : 
+        variable32 = '8';
+        document.getElementById('vault-2-3').textContent = '8'
+        break;
+        case '8' : 
+        variable32 = '9';
+        document.getElementById('vault-2-3').textContent = '9'
+        break;
+        case '9' : 
+        variable32 = '0';
+        document.getElementById('vault-2-3').textContent = '0'
+        break;
+    } if(variable12+variable22+variable32 == '123') {
+           setTimeout(function () {alert('금고 해제중....');}, 250);
+        }">
+    <h1 id="vault-2-3" style="font-size:3em; position:absolute; left:35px; top:-15px;">0</h1>
+    </div>
+</div>`).appendTo('#parent-1');
+                });
+            }
+        function appearVault () {
+    $(document).ready(function() {
+        $(`<div id="vault" class="vault">
+        <div class="vault" id="closeVault" onclick="
+    let elementToRemove = document.querySelector('#vault');
+    function removeVault () {
+        elementToRemove.parentNode.removeChild(elementToRemove);  
+    } removeVault();
+    inputtedPassWd = [];">
+    <h3 id="x-Btn">X</h3>
+    </div>
+    <div id="logpad" class="vault">
+        <h1 id="vaultLog" class="vault">
+            <faketag id="child-vaultLog"></faketag>
+        </h1>
+    </div>
+    <div id="keypad" class="vault">
+        <button id="btn1" class="vault" onclick="inputtedPassWd.push(1);
+        addText();">1</button>
+        <button id="btn2" class="vault" onclick="inputtedPassWd.push(2);
+        addText();">2</button>
+        <button id="btn3" class="vault" onclick="inputtedPassWd.push(3)
+        ;addText();">3</button>
+        <button id="btn4" class="vault" onclick="inputtedPassWd.push(4)
+        ;addText();">4</button>
+        <button id="btn5" class="vault" onclick="inputtedPassWd.push(5)
+        ;addText();">5</button>
+        <button id="btn6" class="vault" onclick="inputtedPassWd.push(6)
+        ;addText();">6</button>
+        <button id="btn7" class="vault" onclick="inputtedPassWd.push(7)
+        ;addText();">7</button>
+        <button id="btn8" class="vault" onclick="inputtedPassWd.push(8)
+        ;addText();">8</button>
+        <button id="btn9" class="vault" onclick="inputtedPassWd.push(9)
+        ;addText();">9</button>
+        <button id="btn0" class="vault" onclick="inputtedPassWd.push(0)
+        ;addText();">0</button>
+    </div>
+    <button id="checkPasswd" class="vault" onclick="if (JSON.stringify([1, 2, 3, 4]) === JSON.stringify(inputtedPassWd)) {
+        alert('비밀번호가 맞습니다');
+        document.getElementById('vaultLog').textContent = 'Open';
+    } else {
+        alert('비밀번호가 틀립니다'); 
+        document.getElementById('vaultLog').textContent = 'Error';
+    }">비밀번호 확인</button>
+    <button id="deleteNum" class="vault" onclick="inputtedPassWd.pop();">마지막 입력한 숫자 삭제</button>
+    <button id="reset" onclick="inputtedPassWd = [];
+    document.getElementById('vaultLog').textContent = '';">재입력</button>
+    </div>`).appendTo('#parent-1');
+    });
+    }
+        let variable12 = '0';
+        let variable22 = '0';
+        let variable32 = '0';
+        let variable13 = '0';
+        let variable23 = '0';
+        let variable33 = '0';
+        let variable43 = '0';
+    </script>
+</body>
+</html>
