@@ -7,165 +7,96 @@
 </head>
 <body>
     <style rel="stylesheet" type="text/css">
-         #vault-3{position:absolute;
+button {
+            font-size:larger;
+        }
+        #btn1{
+            position:absolute;
+            left:0px;
+            top:0px;
+        }
+        #btn2{
+            position:absolute;
+            left:40px;
+            top:0px;
+        }
+        #btn3{
+            position:absolute;
+            left:80px;
+            top:0px;
+        }
+        #btn4{
+            position:absolute;
+            left:0px;
+            top:40px;
+        }
+        #btn5{
+            position:absolute;
+            left:40px;
+            top:40px;
+        }
+        #btn6{
+            position:absolute;
+            left:80px;
+            top:40px;
+        }
+        #btn7{
+            position:absolute;
+            left:0px;
+            top:80px;
+        }
+        #btn8{
+            position:absolute;
+            left:40px;
+            top:80px;
+        }
+        #btn9{
+            position:absolute;
+            left:80px;
+            top:80px;
+        }
+        #btn0{
+            position:absolute;
+            left:40px;
+            top:120px;
+        }
+        #keypad{position:absolute;
+                left:150px;
+                top:100px;}
+        #checkPasswd{position:absolute;
+                     left:135px;
+                     top:260px;}
+            #logpad{position:absolute;
+                    top:35px;
+                    left:65px;
+                    background-color:black;
+                    width:300px;
+                    height:60px;}
+        #vaultLog{color:red;
+                  position:absolute;
+                  left:100px;
+                  top:-15px;
+                  font-size:2em;}
+        #deleteNum{position:absolute;
+                   left:90px;
+                   top:305px;}
+        #vault{position:absolute;
                left:38%;
                top:15%;
                border: 5px solid black;
                width:400px;
                height:400px;
                background-color:gold;}
-        #closeVault-3{background-color:red;
+        #closeVault{background-color:red;
                      position:absolute; 
                      left:375px; 
                      font-size:1.2em; 
                      color:white;
                      width:25px; 
                      height:30px;}
-        #x-Btn-3{position: absolute;
+        #x-Btn{position: absolute;
                left:5px;
                top:-25px;}
-        #firstLine-3{position:absolute;
-                    width:25px;
-                    height:350px;
-                    background-color:black;
-                    left:50px;
-                    top:25px;}
-         #secondLine-3{position:absolute;
-                    width:25px;
-                    height:350px;
-                    background-color:black;
-                    left:125px;
-                    top:25px;}
-        #thirdLine-3{position:absolute;
-                    width:25px;
-                    height:350px;
-                    background-color:black;
-                    left:200px;
-                    top:25px;}
-        #fourthLine-3{position:absolute;
-                    width:25px;
-                    height:350px;
-                    background-color:black;
-                    left:275px;
-                    top:25px;}
-        #firstBtn-3{position:absolute;
-                background-color:white;
-                border:5px solid black;
-                width:75px;
-                height:25px;
-                left:20px;
-                bottom:25px;}
-        #secondBtn-3{position:absolute;
-                background-color:white;
-                border:5px solid black;
-                width:75px;
-                height:25px;
-                left:95px;
-                bottom:25px;}
-        #thirdBtn-3{position:absolute;
-                background-color:white;
-                border:5px solid black;
-                width:75px;
-                height:25px;
-                left:170px;
-                bottom:25px;}
-        #fourthBtn-3{position:absolute;
-                background-color:white;
-                border:5px solid black;
-                width:75px;
-                height:25px;
-                left:245px;
-                bottom:25px;}
-
-    </style>
-    <!---->
-    <div id="vault-3" class="vault-3">
-        <div class="vault-3" id="closeVault-3" onclick="
-        let elementToRemove = document.querySelector('#vault-3');
-        function removeVault () {
-            elementToRemove.parentNode.removeChild(elementToRemove);  
-        } removeVault();">
-    <h3 id="x-Btn-3">X</h3>
-    </div>
-    <div id="firstLine-3"></div>
-    <div id="secondLine-3"></div>
-    <div id="thirdLine-3"></div>
-    <div id="fourthLine-3"></div>
-<!------------------------------------->
-    <div id="firstBtn-3" onclick="
-    switch(variable13) {
-        case '0':document.getElementById('firstBtn-3').style.bottom = '125px';
-                 variable13 = '1';
-                 break;
-        case '1':document.getElementById('firstBtn-3').style.bottom = '250px'; 
-                 variable13 ='2';
-                 break;
-        case '2':document.getElementById('firstBtn-3').style.bottom = '350px'; 
-                 variable13 ='3'
-                 break;
-        case '3':document.getElementById('firstBtn-3').style.bottom = '25px'; 
-                 variable13 ='0'
-                 break;
-    }    if (variable13+variable23+variable33+variable43=='0123') {
-        setTimeout(function () {alert('확인되었습니다.');}, 250);
-      }"></div>
-    <div id="secondBtn-3" onclick="
-    switch(variable23) {
-        case '0':document.getElementById('secondBtn-3').style.bottom = '125px';
-                 variable23 = '1';
-                 break;
-        case '1':document.getElementById('secondBtn-3').style.bottom = '250px'; 
-                 variable23 ='2';
-                 break;
-        case '2':document.getElementById('secondBtn-3').style.bottom = '350px'; 
-                 variable23 ='3'
-                 break;
-        case '3':document.getElementById('secondBtn-3').style.bottom = '25px'; 
-                 variable23 ='0'
-                 break;
-    }    if (variable13+variable23+variable33+variable43=='0123') {
-        setTimeout(function () {alert('확인되었습니다.');}, 250);
-      }"></div>
-    <div id="thirdBtn-3" onclick="
-    switch(variable33) {
-        case '0':document.getElementById('thirdBtn-3').style.bottom = '125px';
-                 variable33 = '1';
-                 break;
-        case '1':document.getElementById('thirdBtn-3').style.bottom = '250px'; 
-                 variable33 ='2';
-                 break;
-        case '2':document.getElementById('thirdBtn-3').style.bottom = '350px'; 
-                 variable33 ='3'
-                 break;
-        case '3':document.getElementById('thirdBtn-3').style.bottom = '25px'; 
-                 variable33 ='0'
-                 break;
-    }    if (variable13+variable23+variable33+variable43=='0123') {
-        setTimeout(function () {alert('확인되었습니다.');}, 250);
-      }"></div>
-    <div id="fourthBtn-3" onclick="
-    switch(variable43) {
-        case '0':document.getElementById('fourthBtn-3').style.bottom = '125px';
-                 variable43 = '1';
-                 break;
-        case '1':document.getElementById('fourthBtn-3').style.bottom = '250px'; 
-                 variable43 ='2';
-                 break;
-        case '2':document.getElementById('fourthBtn-3').style.bottom = '350px'; 
-                 variable43 ='3'
-                 break;
-        case '3':document.getElementById('fourthBtn-3').style.bottom = '25px'; 
-                 variable43 ='0'
-                 break;
-    }    if (variable13+variable23+variable33+variable43=='0123') {
-        setTimeout(function () {alert('확인되었습니다.');}, 250);
-      }"></div>
-</div>
-    <script>
-      let variable13 = '0';
-      let variable23 = '0';
-      let variable33 = '0';
-      let variable43 = '0';
-    </script>
+        </style>
 </body>
 </html>
