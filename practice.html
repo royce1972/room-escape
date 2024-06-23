@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
     <style rel="stylesheet" type="text/css">
-button {
+           button {
             font-size:larger;
         }
         #btn1{
@@ -98,66 +97,70 @@ button {
         #x-Btn{position: absolute;
                left:5px;
                top:-25px;}
-        </style>
-    <script>
-                function appearVault () {
-    $(document).ready(function() {
-        $(`<div id="vault" class="vault">
+    </style>
+    <div id="vault" class="vault">
         <div class="vault" id="closeVault" onclick="
-    let elementToRemove = document.querySelector('#vault');
-    function removeVault () {
-        elementToRemove.parentNode.removeChild(elementToRemove);  
-    } removeVault();
-    inputtedPassWd = [];">
-    <h3 id="x-Btn">X</h3>
-    </div>
-    <div id="logpad" class="vault">
-        <h1 id="vaultLog" class="vault">
-            <faketag id="child-vaultLog"></faketag>
-        </h1>
-    </div>
-    <div id="keypad" class="vault">
-        <button id="btn1" class="vault" onclick="inputtedPassWd.push(1);
-        addText();">1</button>
-        <button id="btn2" class="vault" onclick="inputtedPassWd.push(2);
-        addText();">2</button>
-        <button id="btn3" class="vault" onclick="inputtedPassWd.push(3)
-        ;addText();">3</button>
-        <button id="btn4" class="vault" onclick="inputtedPassWd.push(4)
-        ;addText();">4</button>
-        <button id="btn5" class="vault" onclick="inputtedPassWd.push(5)
-        ;addText();">5</button>
-        <button id="btn6" class="vault" onclick="inputtedPassWd.push(6)
-        ;addText();">6</button>
-        <button id="btn7" class="vault" onclick="inputtedPassWd.push(7)
-        ;addText();">7</button>
-        <button id="btn8" class="vault" onclick="inputtedPassWd.push(8)
-        ;addText();">8</button>
-        <button id="btn9" class="vault" onclick="inputtedPassWd.push(9)
-        ;addText();">9</button>
-        <button id="btn0" class="vault" onclick="inputtedPassWd.push(0)
-        ;addText();">0</button>
-    </div>
-    <button id="checkPasswd" class="vault" onclick="if (JSON.stringify([1, 2, 3, 4]) === JSON.stringify(inputtedPassWd)) {
+            let elementToRemove = document.querySelector('#vault');
+            function removeVault () {
+         elementToRemove.parentNode.removeChild(elementToRemove);  
+             } removeVault();
+            inputtedPassWd = [];">
+<h3 id="x-Btn">X</h3>
+</div>
+<div id="logpad" class="vault">
+    <h1 id="vaultLog" class="vault">
+        <faketag id="child-vaultLog"></faketag>
+    </h1>
+</div>
+<div id="keypad" class="vault">
+    <button id="btn1" class="vault" onclick="inputtedPassWd.push(1);
+    addText();">1</button>
+    <button id="btn2" class="vault" onclick="inputtedPassWd.push(2);
+    addText();">2</button>
+    <button id="btn3" class="vault" onclick="inputtedPassWd.push(3)
+    ;addText();">3</button>
+    <button id="btn4" class="vault" onclick="inputtedPassWd.push(4)
+    ;addText();">4</button>
+    <button id="btn5" class="vault" onclick="inputtedPassWd.push(5)
+    ;addText();">5</button>
+    <button id="btn6" class="vault" onclick="inputtedPassWd.push(6)
+    ;addText();">6</button>
+    <button id="btn7" class="vault" onclick="inputtedPassWd.push(7)
+    ;addText();">7</button>
+    <button id="btn8" class="vault" onclick="inputtedPassWd.push(8)
+    ;addText();">8</button>
+    <button id="btn9" class="vault" onclick="inputtedPassWd.push(9)
+    ;addText();">9</button>
+    <button id="btn0" class="vault" onclick="inputtedPassWd.push(0)
+    ;addText();">0</button>
+</div>
+<button id="checkPasswd" class="vault" onclick="if (JSON.stringify([1, 2, 3, 4]) === JSON.stringify(inputtedPassWd)) {
+    alert('비밀번호가 맞습니다');
+    document.getElementById('vaultLog').textContent = 'Open';
+} else {
+    alert('비밀번호가 틀립니다'); 
+    document.getElementById('vaultLog').textContent = 'Error';
+}">비밀번호 확인</button>
+    <button id="deleteNum" class="vault" onclick="inputtedPassWd.pop();">마지막 입력한 숫자 삭제</button>
+    <button id="reset" onclick="inputtedPassWd = [];
+document.getElementById('vaultLog').textContent = '';">재입력</button>
+        </div>
+        <script>
+                let inputtedPassWd = [];
+        function checkPassWd (designatedPassWd) {
+            if (JSON.stringify(designatedPassWd) === JSON.stringify(inputtedPassWd)) {
         alert('비밀번호가 맞습니다');
         document.getElementById('vaultLog').textContent = 'Open';
     } else {
         alert('비밀번호가 틀립니다'); 
         document.getElementById('vaultLog').textContent = 'Error';
-    }">비밀번호 확인</button>
-    <button id="deleteNum" class="vault" onclick="inputtedPassWd.pop();">마지막 입력한 숫자 삭제</button>
-    <button id="reset" onclick="inputtedPassWd = [];
-    document.getElementById('vaultLog').textContent = '';">재입력</button>
-    </div>`).appendTo('#parent-1');
-    });
     }
-        let variable12 = '0';
-        let variable22 = '0';
-        let variable32 = '0';
-        let variable13 = '0';
-        let variable23 = '0';
-        let variable33 = '0';
-        let variable43 = '0';
-    </script>
+}
+        function addText () {
+                const target = document.getElementById('vaultLog');
+                const targetText = document.createTextNode('*');
+                target.appendChild(targetText);
+                    }
+        </script>
 </body>
 </html>

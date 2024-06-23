@@ -240,9 +240,11 @@
             if (JSON.stringify(designatedPassWd) === JSON.stringify(inputtedPassWd)) {
         alert('비밀번호가 맞습니다');
         document.getElementById('vaultLog').textContent = 'Open';
+        setTimeout(function () {document.getElementById('vaultLog').textContent = '';}, 1500);
     } else {
         alert('비밀번호가 틀립니다'); 
         document.getElementById('vaultLog').textContent = 'Error';
+        setTimeout(function () {document.getElementById('vaultLog').textContent = '';}, 1500);
     }
 }
     function addText () {
@@ -257,7 +259,11 @@
         let elementToRemove = document.querySelector('#vault-3');
         function removeVault () {
             elementToRemove.parentNode.removeChild(elementToRemove);  
-        } removeVault();">
+        } removeVault();
+        variable13 = '0';
+        variable23 = '0';
+        variable33 = '0';
+        variable43 = '0';">
     <h3 id="x-Btn-3">X</h3>
     </div>
     <div id="firstLine-3"></div>
@@ -343,7 +349,10 @@
         let elementToRemove = document.querySelector('#vault-2');
         function removeVault () {
             elementToRemove.parentNode.removeChild(elementToRemove);  
-        } removeVault();">
+        } removeVault();
+            variable12 = '0';
+            variable22 = '0';
+            variable32 = '0';">
     
     <h3 id="x-Btn-2">X</h3>
     </div>
@@ -535,6 +544,7 @@
     } else {
         alert('비밀번호가 틀립니다'); 
         document.getElementById('vaultLog').textContent = 'Error';
+        setTimeout(() => {document.getElementById('vaultLog').textContent = '';}, 1500);
     }">비밀번호 확인</button>
     <button id="deleteNum" class="vault" onclick="inputtedPassWd.pop();">마지막 입력한 숫자 삭제</button>
     <button id="reset" onclick="inputtedPassWd = [];
