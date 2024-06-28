@@ -545,8 +545,7 @@
         document.getElementById('vaultLog').textContent = 'Error';
         setTimeout(() => {document.getElementById('vaultLog').textContent = '';}, 1500);
     }">비밀번호 확인</button>
-    <button id="deleteNum" class="vault" onclick="inputtedPassWd.pop();">마지막 입력한 숫자 삭제</button>
-    <button id="reset" onclick="inputtedPassWd = [];
+   <button id="reset" onclick="inputtedPassWd = [];
     document.getElementById('vaultLog').textContent = '';">재입력</button>
     </div>`).appendTo('#parent-1');
     });
