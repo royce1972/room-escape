@@ -1,0 +1,56 @@
+#vault{position:absolute;
+    left:38%;
+    top:15%;
+    border: 5px solid black;
+    width:400px;
+    height:400px;
+    background-color:gold;}
+#closeVault{background-color:red;
+          position:absolute; 
+          left:375px; 
+          font-size:1.2em; 
+          color:white;
+          width:25px; 
+          height:30px;}
+#x_Btn{position: relative;
+    left:5px;
+    top:-22px;}
+#button1{position:absolute;
+      left:25px;
+      top:130px;
+      width:100px;
+      height:100px;
+      background-color:white;
+      border: 5px solid black;
+      user-select: none;
+     -moz-user-select: none;
+     -webkit-user-select: none;
+     -ms-user-select: none;}
+#button2{position:absolute;
+     left:150px;
+     top:130px;
+     width:100px;
+     height:100px;
+     background-color:white;
+     border: 5px solid black;
+     user-select: none;
+     -moz-user-select: none;
+     -webkit-user-select: none;
+     -ms-user-select: none;}
+#button3{position:absolute;
+      left:275px;
+      top:130px;
+      width:100px;
+      height:100px;
+      background-color:white;
+      border: 5px solid black;
+      user-select: none;
+     -moz-user-select: none;
+     -webkit-user-select: none;
+     -ms-user-select: none;}
+.targets{
+    font-size:3em;
+    position:absolute;
+    left:35px;
+    top:-15px;
+}

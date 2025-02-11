@@ -1,0 +1,92 @@
+
+#closeVault{
+    background-color:red;
+    position:absolute; 
+    left:375px; 
+    font-size:1.2em; 
+    color:white;
+    width:25px; 
+    height:30px;
+}
+#x_Btn{
+    position: absolute;
+    left:5px;
+    top:-25px;
+}
+#firstLine{
+    position:absolute;
+    width:25px;
+    height:350px;
+    background-color:black;
+    left:50px;
+    top:25px;
+}
+#secondLine{
+    position:absolute;
+    width:25px;
+    height:350px;
+    background-color:black;
+    left:125px;
+    top:25px;
+    }
+#thirdLine{
+    position:absolute;
+    width:25px;
+    height:350px;
+    background-color:black;
+    left:200px;
+    top:25px;
+}
+#fourthLine{
+    position:absolute;
+    width:25px;
+    height:350px;
+    background-color:black;
+    left:275px;
+    top:25px;
+}
+#firstBtn{
+    position:absolute;
+    background-color:white;
+    border:5px solid black;
+    width:75px;
+    height:25px;
+    left:20px;
+    bottom:25px;
+}
+#secondBtn{
+    position:absolute;
+    background-color:white;
+    border:5px solid black;
+    width:75px;
+    height:25px;
+    left:95px;
+    bottom:25px;
+}
+#thirdBtn{
+    position:absolute;
+    background-color:white;
+    border:5px solid black;
+    width:75px;
+    height:25px;
+    left:170px;
+    bottom:25px;
+}
+#fourthBtn{
+    position:absolute;
+    background-color:white;
+    border:5px solid black;
+    width:75px;
+    height:25px;
+    left:245px;
+    bottom:25px;
+}
+#vault{
+    position:absolute;
+    left:38%;
+    top:15%;
+    border: 5px solid black;
+    width:400px;
+    height:400px;
+    background-color:gold;
+}

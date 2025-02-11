@@ -1,0 +1,124 @@
+button {
+    font-size: larger;
+}
+
+#btn1 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#btn2 {
+    position: absolute;
+    left: 40px;
+    top: 0px;
+}
+
+#btn3 {
+    position: absolute;
+    left: 80px;
+    top: 0px;
+}
+
+#btn4 {
+    position: absolute;
+    left: 0px;
+    top: 40px;
+}
+
+#btn5 {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+}
+
+#btn6 {
+    position: absolute;
+    left: 80px;
+    top: 40px;
+}
+
+#btn7 {
+    position: absolute;
+    left: 0px;
+    top: 80px;
+}
+
+#btn8 {
+    position: absolute;
+    left: 40px;
+    top: 80px;
+}
+
+#btn9 {
+    position: absolute;
+    left: 80px;
+    top: 80px;
+}
+
+#btn0 {
+    position: absolute;
+    left: 40px;
+    top: 120px;
+}
+
+#keypad {
+    position: absolute;
+    left: 150px;
+    top: 100px;
+}
+
+#checkPasswd {
+    position: absolute;
+    left: 135px;
+    top: 260px;
+}
+
+#logpad {
+    position: absolute;
+    top: 35px;
+    left: 65px;
+    background-color: black;
+    width: 300px;
+    height: 60px;
+}
+
+#vaultLog {
+    color: red;
+    position: absolute;
+    left: 110px;
+    top: -15px;
+    font-size: 2em;
+}
+
+#reset {
+    position: absolute;
+    left: 165px;
+    top: 305px;
+}
+
+#vault {
+    position: absolute;
+    left: 38%;
+    top: 15%;
+    border: 5px solid black;
+    width: 400px;
+    height: 400px;
+    background-color: gold;
+}
+
+#closeVault {
+    background-color: red;
+    position: absolute;
+    left: 375px;
+    font-size: 1.2em;
+    color: white;
+    width: 25px;
+    height: 30px;
+}
+
+#x_Btn {
+    position: absolute;
+    left: 5px;
+    top: -25px;
+}
