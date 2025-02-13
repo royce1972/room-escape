@@ -1,0 +1,14 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "myname",
+      "stage": 1
+    },
+    {
+      "id": 2,
+      "name": "thank you",
+      "stage": 0
+    }
+  ]
+}

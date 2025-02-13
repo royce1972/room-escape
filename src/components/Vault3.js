@@ -43,7 +43,7 @@ export default function Vault3() {
             case '3': targetRef1.current.style.bottom = '25px'; 
                     variable13 ='0'
                     break;
-        }    if (variable13+variable23+variable33+variable43=='0123') {
+        }    if (variable13+variable23+variable33+variable43  ==='0123') {
             setTimeout(function () {alert('확인되었습니다.');}, 250);
         }}}></div>
         <div id={styles.secondBtn} ref={targetRef2} onClick={ () => {
@@ -60,7 +60,7 @@ export default function Vault3() {
             case '3': targetRef2.current.style.bottom = '25px'; 
                     variable23 ='0'
                     break;
-        }    if (variable13+variable23+variable33+variable43=='0123') {
+        }    if (variable13+variable23+variable33+variable43 ==='0123') {
             setTimeout(function () {alert('확인되었습니다.');}, 250);
         }}}></div>
         <div id={styles.thirdBtn} ref={targetRef3} onClick={ () => {
@@ -77,7 +77,7 @@ export default function Vault3() {
             case '3': targetRef3.current.style.bottom = '25px'; 
                     variable33 ='0'
                     break;
-        }    if (variable13+variable23+variable33+variable43=='0123') {
+        }    if (variable13+variable23+variable33+variable43 ==='0123') {
             setTimeout(function () {alert('확인되었습니다.');}, 250);
     }}}></div>
         <div id={styles.fourthBtn} ref={targetRef4} onClick={ () => {
@@ -94,7 +94,7 @@ export default function Vault3() {
             case '3': targetRef4.current.style.bottom = '25px'; 
                     variable43 ='0'
                     break;
-        }    if (variable13+variable23+variable33+variable43=='0123') {
+        }    if (variable13+variable23+variable33+variable43 ==='0123') {
             setTimeout(function () {alert('확인되었습니다.');}, 250);
         }}}></div>
     </div>
