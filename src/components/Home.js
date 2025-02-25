@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import UseFindUser from '../hooks/useFindUser';
 
 function Home() {
@@ -14,7 +15,55 @@ function Home() {
 
   return (
     <div>
-      <button onClick={handleClick}>Check</button>
+      <Link to="/Vault1">
+      <div style={
+        {
+          width: "100px",
+          height: "50px",
+          alignContent: "center",
+          padding: "15px",
+          border: "3px solid black",
+          backgroundColor: "red",
+          // top: "100px",
+          // left: "100px",
+        }
+      }>Vault-1</div>
+      </Link>
+      <Link to="/Vault2">
+      <div style={
+        {
+          width: "100px",
+          height: "50px",
+          alignContent: "center",
+          padding: "15px",
+          border: "3px solid black",
+          backgroundColor: "red",
+          // top: "100px",
+          // left: "200px",
+        }
+      }>Vault-2</div>
+      </Link>
+      <Link to="/Vault3">
+      <div style={
+        {
+          width: "100px",
+          height: "50px",
+          alignContent: "center",
+          padding: "15px",
+          border: "3px solid black",
+          backgroundColor: "red",
+          // top: "100px",
+          // left: "200px",
+        }
+      }>Vault-3</div>
+      </Link> 
+      <button onClick={handleClick} style={
+        {
+          position: "relative",
+          top: "60px",
+          left: "-400px",
+        }
+      }>Check</button>
     </div>
   );
 }

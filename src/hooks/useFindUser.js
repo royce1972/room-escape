@@ -13,7 +13,7 @@ export default function UseFindUser(userName) {
   
           const existingUser = data.find(user => user.name === userName);
           if (existingUser) {
-            navigate(`/stage${existingUser.stage}`);
+            navigate(`/Stage${existingUser.stage}`);
             setUser(existingUser);
           } else {
             const maxId = data.reduce((max, user) => (user.id > max ? user.id : max), 0);
@@ -32,7 +32,7 @@ export default function UseFindUser(userName) {
             }
   
             setUser(newUserData);
-            navigate('/stage1');
+            navigate('/Stage1');
           }
         };
   
