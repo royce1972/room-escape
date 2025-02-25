@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-export default function () {
+export default function Header() {
     return (
         <div className='header'>
             <Link to='/'>
                 <div className='menu'>
                     <div id='main-img'>
-                        <img src='main-logo.png' />
+                        <img alt='#' src='main-logo.png' />
                     </div>
                 </div>
             </Link>
