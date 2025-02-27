@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Navigate, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Route, Routes,} from 'react-router-dom';
 import Vault1 from './components/Vault1';
 import Vault2 from './components/Vault2';
 import Vault3 from './components/Vault3';
@@ -9,9 +9,8 @@ import Header from './components/Header';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
     <div className="App">
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/Vault1' element={<Vault1 first={1} second={2} third={3} fourth={4} />} />
@@ -22,7 +21,7 @@ function App() {
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import UseFindUser from '../hooks/useFindUser';
+import Header from '../components/Header';
 
 function Home() {
   const [userName, setUserName] = useState(null);
-  const user = UseFindUser(userName);
+  UseFindUser(userName);
 
   const handleClick = () => {
     const name = prompt('Enter your name.');
@@ -15,6 +16,7 @@ function Home() {
 
   return (
     <div>
+       <Header />
       <Link to="/Vault1">
       <div style={
         {

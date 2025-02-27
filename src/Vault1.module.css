@@ -1,3 +1,6 @@
+#vault{
+    user-select: none;
+}
 button {
     font-size: larger;
 }
